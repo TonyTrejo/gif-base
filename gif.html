@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button data-animal="cat">meow</button>
+    <button data-animal="dog">woff</button>
+    <button data-animal="bird">chirp</Button>
+    <div id="gifs-appear-here"></div>
+    <script> src = http://code.jquery.com/jquery-2.1.3.min.js </script>
+    <script src="text/javascript">
+
+
+        $("button").on("click", function () {
+
+           var animal = $(this).attr("data-animal");
+            console.log(animal);
+        })
+
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + topics + "QEATE35eTALPtNfpbD4gL0HIZXBFNZrW&limit=10";
+        console.log(queryURL)
+
+        $.ajax({
+            url:queryURL,
+            method: "GET"
+        })
+        .done(function(response){
+            console.log(queryURL);
+            console.log(response);
+
+            var results = response.data;
+        })
+
+        for()
+    </script>
+</body>
+
+</html>
